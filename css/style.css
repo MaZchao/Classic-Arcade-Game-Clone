@@ -1,0 +1,52 @@
+body {
+  text-align: center;
+}
+
+.success-toast {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(0);
+  transform-origin: center;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000000;
+}
+
+.success-toast.show {
+  animation: popup .3s;
+  transform: translate3d(-50%, -50%, 0) scale(1);
+}
+
+.success-message {
+  padding: 0 10px;
+}
+
+.restart-button {
+  margin-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #5068d3;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+
+.restart-button:hover {
+  background-color: #384fb7;
+}
+
+@keyframes popup {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(0);
+  }
+
+  50% {
+    transform: translate3d(-50%, -50%, 0) scale(1.1);
+  }
+
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+}
